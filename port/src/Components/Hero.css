@@ -1,0 +1,189 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  transition: background-color 0.3s;
+}
+
+.hero-light {
+  background-color: white;
+  color: #1f2937;
+}
+
+.hero-dark {
+  background-color: black;
+  color: white;
+}
+
+.hero-content-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 1ch;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.game-container {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+  max-width: 320px;
+  backdrop-filter: blur(6px);
+  text-align: center;
+}
+
+.status {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.cell:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.reset-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: #666;
+}
+
+@media (max-width: 768px) {
+  .hero-content-row {
+    flex-direction: column;
+  }
+
+  .cell {
+    width: 60px;
+    height: 60px;
+    font-size: 1.25rem;
+  }
+}
+
+#Home {
+  background: linear-gradient(135deg, #000428, #004e92);
+  color: white;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 1.5rem;
+  }
+}
+.challenge-btn {
+  position: fixed; /* Changed to fixed to keep it in viewport */
+  right: 30px;
+  top: 50%; /* Position at vertical center */
+  transform: translateY(-50%); /* Adjust for element's own height */
+  padding: 10px 18px;
+  background-color: #00bcd4;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 1000; /* Increased z-index to ensure visibility */
+  box-shadow: 0 0 10px #00bcd4aa;
+  transition: 0.3s ease;
+}
+
+.challenge-btn:hover {
+  background-color: #0097a7;
+}
+
+.fixed-game {
+  position: fixed; /* Changed to fixed to keep it in viewport */
+  right: 30px;
+  top: 50%; /* Position at vertical center */
+  transform: translateY(-50%); /* Adjust for element's own height */
+  z-index: 999; /* Increased z-index to ensure visibility, slightly lower than button */
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hide-game-btn {
+  position: static; /* Reset positioning for button inside game container */
+  margin-bottom: 10px; /* Add some space below the button */
+  transform: none; /* Remove transform inherited from challenge-btn */
+}
+

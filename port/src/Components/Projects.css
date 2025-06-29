@@ -1,0 +1,59 @@
+.projects-section {
+  background-color: #888383;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem; /* Space for heading */
+  box-sizing: border-box;
+  padding-bottom: 15px;
+    width: 100%;
+  height: 100vh;
+}
+
+.projects-heading {
+  margin-top: 2rem; /* Example margin-top */
+  font-size: 2rem;
+  color: inherit; /* Inherit color from parent for theme compatibility */
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.project-item {
+  background-color: var(--background-color-secondary, #b95858); /* Use CSS variable for theme compatibility */
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.project-item h3 {
+  margin-bottom: 0.5rem;
+  color: inherit;
+}
+
+.project-item p {
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+.project-item a {
+  display: inline-block;
+  background-color: #82acd9;
+  color: rgb(241, 238, 238);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.project-item a:hover {
+  background-color: #0056b3;
+}
